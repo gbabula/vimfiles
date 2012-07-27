@@ -41,9 +41,6 @@ mkdir -p $full_path/home/.vim/tmp/swap
 mkdir -p $full_path/home/.vim/tmp/yankring
 mkdir -p $full_path/home/.vim/spell
 
-echo "Setting up default vimrc.local..."
-cp $full_path/templates/.vimrc.local.example $full_path/home/.vimrc.local
-
 echo "Initializing submodules..."
 git submodule init
 git submodule update
