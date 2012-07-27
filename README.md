@@ -18,19 +18,13 @@ At this point you should have a default setup ready to rock. You're going to wan
 
 ## Pimp Your Ride
 
-The `install.sh` script created a `.vimrc.local` file. This stores local configurations based on the user's needs, it is loaded after the `.vimrc` file. Anything created in `.vimrc.local` overrides settings set in `.vimrc`. This file is ignored and not checked back into the repository. It's recommended you keep a backup of this somewhere.
-
-You'll want to tune a few settings right off the bat. Open the `.vimrc.local` file (in Vim type `,evl` a mnemonic is "*edit vimrc local*").
+You'll want to tune a few settings right off the bat. Open the `.vimrc` file
 
 1. Uncomment `g:yankring_history_dir` and optionally change it's path, otherwise `yankring` will save it's history in a file in your `$HOME` directory
 - Optional, point `g:MarkdownPreviewUserStyles` to the directory where your user specific style sheets for the markdown previewer reside. If your an F/ peop, you can clone the repository for [F/ Markdown Themes][fmd-themes] and gain templates and style sheets to keep you out of MS Word.
 - Set the default browser by changing `g:RefreshRunningBrowserDefault`. Use "chrome", "safari", or "firefox"
 - Give yourself a signature with `g:snips_author` by including your name for various [snipmate][snipmate] snippets
 - Optionally uncomment one of the `colorschemes`, there are 4 included as described below, the default is `colorblind`
-- It's recommended to uncomment the entire conditional under *User GUI specific settings*. We roll with the [custom font MesloGM][MesloGM] at 12px. You'll need to download and install it, otherwise roll with Monaco or something if you want to go blind. If you want to set a transparency, you'll need to enable *Use experimental renderer* in MacVim's preferences -> Advanced settings. The primary reason for uncommenting this conditional is, you'll find certain plug-ins need to be disabled or have certain settings applied to work across MacVim and various \*nix environments.
-
-You can apply custom key bindings in `.vimrc.local`, configure plug-ins, or override default settings.
-
 
 ## Updating
 

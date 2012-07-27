@@ -133,7 +133,6 @@ map <F2> :NERDTreeToggle<cr>
 nnoremap <silent> <F3> :TlistToggle<cr>
 nnoremap <silent> <F4> :YRShow<cr>
 ino <silent> <F5> <c-r>=ShowAvailableSnips()<cr>
-" <F9>-<F12> is reserved for .vimrc.local
 
 " Visually select the text that was last edited/pasted
 nmap gV `[v`]
@@ -152,10 +151,6 @@ map <leader>a :Ack
 
 " Toggle wrapping in the current buffer
 nmap <silent> <leader>wt :set wrap!<cr>
-
-" Edit .vimrc and .vimrc.local
-nmap <leader>evm <C-w><C-v><C-l>:e $MYVIMRC<cr>
-nmap <leader>evl <C-w><C-v><C-l>:e ~/.vimrc.local<cr>
 
 " Collapse all multi-line occurrences of whitespace into one line
 map <leader>CN :%s/^\n\+/\r//<cr>:let @/=''<cr>
@@ -282,7 +277,7 @@ endif
 
 syntax on
 set background=dark
-colorscheme colorblind
+colorscheme solarized
 
 " Set the title bar to something meaningful
 if has('title') && (has('gui_running') || &title)
