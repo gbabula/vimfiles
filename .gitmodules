@@ -112,9 +112,6 @@
 [submodule "home/.vim/bundle_storage/yankring"]
 	path = home/.vim/bundle_storage/yankring
 	url = https://github.com/chrismetcalf/vim-yankring.git
-[submodule "home/.vim/bundle_storage/rvm.vim"]
-	path = home/.vim/bundle_storage/rvm.vim
-	url = https://github.com/csexton/rvm.vim.git
 [submodule "home/.vim/bundle_storage/delimitMate"]
 	path = home/.vim/bundle_storage/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
@@ -130,3 +127,6 @@
 [submodule "home/.vim/bundle_storage/vim-coffee-script"]
 	path = home/.vim/bundle_storage/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "home/.vim/bundle_storage/vim-rvm"]
+	path = home/.vim/bundle_storage/vim-rvm
+	url = https://github.com/tpope/vim-rvm.git

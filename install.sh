@@ -11,7 +11,7 @@ default_bundles=(
   nerdcommenter
   nerdtree
   processing.vim
-  rvm.vim
+  vim-rvm
   snipmate.vim
   statusline
   supertab
