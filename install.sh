@@ -64,8 +64,8 @@ done
 # Make an additional symlink of css for scss
 ln -sv $full_path/home/.vim/snippets_storage/css.snippets $full_path/home/.vim/snippets/scss.snippets
 
-# echo "Symlinking to home directory"
-# for f in `ls $full_path/home/`; do
-  # ln -sv $full_path/home/$f $HOME/$f
-# done
+echo "Symlinking to home directory, dot files -A"
+for f in `ls -A $full_path/home/`; do
+  ln -sv $full_path/home/$f $HOME/$f
+done
 
