@@ -1,12 +1,6 @@
 [submodule "home/.vim/bundle_storage/ack.vim"]
 	path = home/.vim/bundle_storage/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "home/.vim/bundle_storage/actionscript.vim"]
-	path = home/.vim/bundle_storage/actionscript.vim
-	url = https://github.com/vim-scripts/actionscript.vim--Leider.git
-[submodule "home/.vim/bundle_storage/applescript.vim"]
-	path = home/.vim/bundle_storage/applescript.vim
-	url = https://github.com/vim-scripts/applescript.vim.git
 [submodule "home/.vim/bundle_storage/argtextobj.vim"]
 	path = home/.vim/bundle_storage/argtextobj.vim
 	url = https://github.com/vim-scripts/argtextobj.vim.git
@@ -67,9 +61,6 @@
 [submodule "home/.vim/bundle_storage/snipmate.vim"]
 	path = home/.vim/bundle_storage/snipmate.vim
 	url = https://github.com/msanders/snipmate.vim.git
-[submodule "home/.vim/bundle_storage/specky"]
-	path = home/.vim/bundle_storage/specky
-	url = https://github.com/vim-scripts/Specky.git
 [submodule "home/.vim/bundle_storage/syntastic"]
 	path = home/.vim/bundle_storage/syntastic
 	url = https://github.com/scrooloose/syntastic.git

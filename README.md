@@ -1,19 +1,6 @@
-# F/ Vim Configuration
+# tlee Vim Configuration
 
-The default configuration files for Vim used at F/. Tuned to play nice with [MacVim][macvim] but works with most \*nix environments. Setup using [homesick][homesick] for that symlinkn' goodness.
-
-
-## To Get The Full Effect
-
-F/ peops, double check, but you most likely already have the basic requirements installed on your machine.
-
-- [Homebrew][homebrew] - `ruby -e "$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)"`
-- [MacVim][macvim] - `brew install macvim`
-- [Homesick][homesick] - `gem install homesick`
-- [discount][discount] - `brew install discount `
-- [ctags][ctags] - `brew install ctags `
-
-[MacVim][macvim] is not a requirement as the majority of the files work in most \*nix environments including Terminal. It's recommended to use [Homebrew's][homebrew] package of [MacVim][macvim], as it compiles MacVim and Vim at 64 bit with Ruby, Python, Perl, installs the command line link `mvim`, plus a bunch of other goodness. [Homesick][homesick] is required for easy management of dot files with the repository. The [discount][discount] executable is recommended for converting markdown files to html for previewing. The [ctags][ctags] executable is helpful for taglist (jumping between files) and omni completion.
+Head start courtesy of F/.
 
 
 ## Installation
@@ -21,11 +8,8 @@ F/ peops, double check, but you most likely already have the basic requirements 
 To install the files and default configuration run the following:
 
     homesick clone git@github.com:factorylabs/vimfiles.git
-    cd ~/.homesick/repos/vimfiles
+    cd vimfiles
     bash install.sh
-    homesick symlink vimfiles -f
-
-\* If you don't have commit rights use `homesick clone https://github.com/factorylabs/vimfiles.git`
 
 This will install the default configuration files/directories, submodules, and create symbolic links for bundles and snippets. Most of the heavy lifting is done by the [install script][install.sh].
 
@@ -117,8 +101,6 @@ Test it out and if it's a keeper, add it to the repository, add it to the list b
 The [install script][install.sh] created initial symbolic links for the plug-ins listed below. These are primarily file type oriented plus a few must haves. You can disable any of these by removing the symbolic link, but it would be a lot cooler if you didn't.
 
 - [ack.vim](https://github.com/mileszs/ack.vim/blob/master/doc/ack.txt)
-- [actionscript.vim](https://github.com/vim-scripts/actionscript.vim--Leider)
-- [applescript.vim](https://github.com/vim-scripts/applescript.vim)
 - [browser-refresh.vim](https://github.com/mkitt/browser-refresh.vim/blob/master/doc/browser-refresh.txt)
 - [cocoa.vim](https://github.com/msanders/cocoa.vim/blob/master/doc/cocoa.txt)
 - [gist-vim](https://github.com/mattn/gist-vim)
@@ -151,20 +133,17 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 
 These are the additional plug-ins included, but are not required. They are not linked to the `bundle` directory out of the box. If adding any of these, make sure to read the docs on their usage and what variables/settings may be required in `.vimrc.local`
 
-- [argtextobj.vim](https://github.com/vim-scripts/argtextobj.vim) - Motion commands for manipulating function arguments \*\*
 - [autocomplpop.vim](https://github.com/vim-scripts/AutoComplPop/blob/master/doc/acp.txt) - Live completion as you type, this can slow Vim down, but is useful in certain situations
 - [autocorrect.vim](https://github.com/vim-scripts/autocorrect.vim) - Corrects misspellings as you type i.e. teh -> the \*\*
 - [bufkill.vim](https://github.com/vim-scripts/bufkill.vim) - Unload, delete or wipe a buffer
 - [camelcasemotion](https://github.com/vim-scripts/camelcasemotion/blob/master/doc/camelcasemotion.txt) - Motion commands for moving between camelCase or words\_with\_underscores \*\*
 - [clang-complete](https://github.com/Rip-Rip/clang_complet://github.com/Rip-Rip/clang_complete) - Use clang for completing C/C++ code.
 - [colorsel.vim](https://github.com/vim-scripts/colorsel.vim/blob/master/doc/colorsel.txt) - Interactive RGB/HSV color selector
-- [Command-T](http://www.url.com/) - Just like TextMate
 - [delimitMate](https://github.com/Raimondi/delimitMate) - Automatic closing of quotes, parenthesis, brackets, etc. \*\*
 - [gundo](https://github.com/vim-scripts/Gundo/blob/master/doc/gundo.txt) - Graph Vim's undo tree so it is actually usable
 - [html-autoclose.vim](https://github.com/vim-scripts/HTML-AutoCloseTag) - Automatically closes HTML tags, doesn't play well with the delimitMate plugin
 - [indexed-search.vim](https://github.com/vim-scripts/IndexedSearch) - Adds visual cues when performing searches within a file \*\*
 - [lustyjuggler](https://github.com/vim-scripts/LustyJuggler) - Enables a window for navigating through open buffers
-- [specky](https://github.com/vim-scripts/Specky/blob/master/doc/specky.txt) - Plug-in for testing Ruby code with RSpec
 - [tabular](https://github.com/godlygeek/tabular/blob/master/doc/Tabular.txt) - Configurable, flexible, intuitive text aligning \*\*
 - [tailminusf](https://github.com/vim-scripts/TailMinusF/blob/master/doc/tailminusf.txt) - Watch the contents of a file in real time
 - [vim-ragtag](https://github.com/tpope/vim-ragtag/blob/master/doc/ragtag.txt) - Ghetto XML/HTML mappings

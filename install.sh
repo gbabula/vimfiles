@@ -1,13 +1,12 @@
 #!/bin/sh
 default_bundles=(
   ack.vim
-  actionscript.vim
-  applescript.vim
   browser-refresh.vim
-  cocoa.vim
   gist-vim
   jade.vim
   json.vim
+  html-autoclose.vim
+  lustyjuggler
   markdown-preview.vim
   nerdcommenter
   nerdtree
@@ -17,6 +16,7 @@ default_bundles=(
   statusline
   supertab
   syntastic
+  tabular
   taglist.vim
   vim-coffee-script
   vim-cucumber
@@ -60,13 +60,12 @@ echo "Symlinking default snippets..."
 for f in `ls $full_path/home/.vim/snippets_storage/`; do
   ln -sv $full_path/home/.vim/snippets_storage/$f $full_path/home/.vim/snippets/$f
 done
+
 # Make an additional symlink of css for scss
 ln -sv $full_path/home/.vim/snippets_storage/css.snippets $full_path/home/.vim/snippets/scss.snippets
 
-echo "--------------------------------------------------"
-echo "*** Install Complete ***"
-echo "--------------------------------------------------"
-echo "Run the following command to symlink your castle:"
-echo "homesick symlink ${PWD##*/}"
-echo "--------------------------------------------------"
+# echo "Symlinking to home directory"
+# for f in `ls $full_path/home/`; do
+  # ln -sv $full_path/home/$f $HOME/$f
+# done
 
