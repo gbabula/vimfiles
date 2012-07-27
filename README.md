@@ -7,7 +7,7 @@ Head start courtesy of F/.
 
 To install the files and default configuration run the following:
 
-    homesick clone git@github.com:factorylabs/vimfiles.git
+    git clone https://github.com/tlee/vimfiles.git 
     cd vimfiles
     bash install.sh
 
@@ -39,9 +39,9 @@ Submodule plug-ins generate `doc/tag` files associated with help documents every
 There are two shell scripts included to help in this process [clean.sh][clean.sh] and [update.sh][update.sh].
 
 
-### Updating From The F/ Repository
+### Updating From The Repository
 
-To update from the latest changes in the F/ repository run the following:
+To update from the latest changes in the repository run the following:
 
 1. Quit out of Vim
 - `bash clean.sh`
@@ -59,9 +59,6 @@ To pull upstream changes for all of the submodules run the following:
 - `bash update.sh`
 - `git stash` or `git add` any updates from your environment spit out by the `clean.sh` call to `git status`
 - `git pull --rebase`
-
-Commit your changes back up to the repository. F/ will run this script once a week to keep the submodules as up to date as possible.
-
 
 ## Plug-Ins
 
@@ -156,7 +153,7 @@ These are the additional plug-ins included, but are not required. They are not l
 
 ## Snippets
 
-By default all of the snippet files stored within `snippets_storage` are symlinked into the `snippets` directory. These cover most of the languages used at F/. To see the available snippets for a given file type hit `<F5>`, a snippet is triggered using `<tab>`.
+By default all of the snippet files stored within `snippets_storage` are symlinked into the `snippets` directory. To see the available snippets for a given file type hit `<F5>`, a snippet is triggered using `<tab>`.
 
 Certain file types like JavaScript have hundreds of snippets based on the native language and various libraries. This can become unmanageable pretty quickly. The solution is to breakout specific libraries into their own files. For example `javascript-jasmine.snippets` where it needs to be named as `language-library.snippets`. Since snippets are saved in the `snippets_storage` directory, you can be selective about what gets a symbolic link within the `snippets` directory.
 
@@ -205,36 +202,6 @@ The color themes have been designed with similarities in the syntax settings. Ju
 ### FCheat
 
 Within Vim type `:h fcheat` to view key and leader bindings for the F/ configuration
-
-
-### Turn Caps Lock Into The Control Key
-
-The control key is in an awkward position and the caps lock key is basically useless. It's right there in the home row, so you might as well put it to good use.
-
-1. Open up System Preferences
-- Select `Keyboard`
-- Select `Modifier Keys`
-- From the drop down, select `^ Control` under the `Caps Lock` setting
-- In the `Select Keyboard` drop down, you'll want to set it for both internal and external keyboards
-
-
-### Alias MacVim
-
-1. Launch [MacVim][macvim] from Terminal by typing `mvim` and hitting enter
-- Right click the logo in your dock and select `Options > Show in Finder`
-- Create an alias of `MacVim.app` and drop it in the `/Applications/` directory (this will allow it to be found by Spotlight)
-- Optionally choose to keep the icon in your dock `Options > Keep in Dock`
-
-
-### Alias MacVim's install of Vim For Terminal
-
-Fire up your `.bashrc`, `.zshrc` or wherever your aliases are and add the following:
-
-    alias vim='/usr/local/Cellar/macvim/v7.3-53/MacVim.app/Contents/MacOS/Vim'
-
-Your path may be different depending on the latest version from [homebrew][homebrew].
-
-Once you point the alias to [MacVim's][macvim] Vim executable, you should be able to run plug-ins and crap that depend on ruby, python and so on. While you won't get all the niceties of the gui app, you'll at least have a similar install for your Terminal as what's in [MacVim][macvim].
 
 
 ### Mouse Support For Terminal

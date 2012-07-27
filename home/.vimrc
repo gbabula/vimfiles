@@ -284,28 +284,6 @@ syntax on
 set background=dark
 colorscheme colorblind
 
-
-" GUI specific settings (could be in .gvimrc)
-" -----------------------------------------------------------------------------
-if has('gui_running')
-  set guifont=Menlo:h12
-  set go-=T
-  set go-=l
-  set go-=L
-  set go-=r
-  set go-=R
-  if has('gui_macvim')
-    macmenu &File.New\ Tab key=<nop>
-    set fuoptions=maxhorz,maxvert
-    set cursorline
-    inoremap <F1> <ESC>:set invfullscreen<CR>
-    nnoremap <F1> :set invfullscreen<CR>
-    vnoremap <F1> :set invfullscreen<CR>
-    vmap <D-]> >gv
-    vmap <D-[> <gv
-  end
-endif
-
 " Set the title bar to something meaningful
 if has('title') && (has('gui_running') || &title)
   set titlestring=
@@ -316,11 +294,8 @@ if has('title') && (has('gui_running') || &title)
 endif
 
 
-" !- See the statusline plugin for status line settings...
-
-" Load up the user's local .vimrc config
+" Customizations
 " -----------------------------------------------------------------------------
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
+let g:yankring_history_dir=$HOME.'/.vim/tmp/yankring/'
+let g:RefreshRunningBrowserDefault = 'chrome'
 
