@@ -4,27 +4,12 @@
 [submodule "home/.vim/bundle_storage/argtextobj.vim"]
 	path = home/.vim/bundle_storage/argtextobj.vim
 	url = https://github.com/vim-scripts/argtextobj.vim.git
-[submodule "home/.vim/bundle_storage/autocomplpop.vim"]
-	path = home/.vim/bundle_storage/autocomplpop.vim
-	url = https://github.com/vim-scripts/AutoComplPop.git
-[submodule "home/.vim/bundle_storage/autocorrect.vim"]
-	path = home/.vim/bundle_storage/autocorrect.vim
-	url = https://github.com/vim-scripts/autocorrect.vim.git
 [submodule "home/.vim/bundle_storage/browser-refresh.vim"]
 	path = home/.vim/bundle_storage/browser-refresh.vim
 	url = https://github.com/mkitt/browser-refresh.vim.git
 [submodule "home/.vim/bundle_storage/bufkill.vim"]
 	path = home/.vim/bundle_storage/bufkill.vim
 	url = https://github.com/vim-scripts/bufkill.vim.git
-[submodule "home/.vim/bundle_storage/camelcasemotion"]
-	path = home/.vim/bundle_storage/camelcasemotion
-	url = https://github.com/vim-scripts/camelcasemotion.git
-[submodule "home/.vim/bundle_storage/cocoa.vim"]
-	path = home/.vim/bundle_storage/cocoa.vim
-	url = https://github.com/msanders/cocoa.vim.git
-[submodule "home/.vim/bundle_storage/colorsel.vim"]
-	path = home/.vim/bundle_storage/colorsel.vim
-	url = https://github.com/vim-scripts/colorsel.vim.git
 [submodule "home/.vim/bundle_storage/gist-vim"]
 	path = home/.vim/bundle_storage/gist-vim
 	url = https://github.com/mattn/gist-vim.git
@@ -55,9 +40,6 @@
 [submodule "home/.vim/bundle_storage/nerdtree"]
 	path = home/.vim/bundle_storage/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "home/.vim/bundle_storage/processing.vim"]
-	path = home/.vim/bundle_storage/processing.vim
-	url = https://github.com/vim-scripts/Processing.git
 [submodule "home/.vim/bundle_storage/snipmate.vim"]
 	path = home/.vim/bundle_storage/snipmate.vim
 	url = https://github.com/msanders/snipmate.vim.git
@@ -70,9 +52,6 @@
 [submodule "home/.vim/bundle_storage/taglist.vim"]
 	path = home/.vim/bundle_storage/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule "home/.vim/bundle_storage/tailminusf"]
-	path = home/.vim/bundle_storage/tailminusf
-	url = https://github.com/vim-scripts/TailMinusF.git
 [submodule "home/.vim/bundle_storage/vim-cucumber"]
 	path = home/.vim/bundle_storage/vim-cucumber
 	url = https://github.com/tpope/vim-cucumber.git
@@ -88,9 +67,6 @@
 [submodule "home/.vim/bundle_storage/vim-markdown"]
 	path = home/.vim/bundle_storage/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
-[submodule "home/.vim/bundle_storage/vim-ragtag"]
-	path = home/.vim/bundle_storage/vim-ragtag
-	url = https://github.com/tpope/vim-ragtag.git
 [submodule "home/.vim/bundle_storage/vim-rails"]
 	path = home/.vim/bundle_storage/vim-rails
 	url = https://github.com/tpope/vim-rails.git
@@ -100,9 +76,6 @@
 [submodule "home/.vim/bundle_storage/vim-ruby"]
 	path = home/.vim/bundle_storage/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule "home/.vim/bundle_storage/vim-speeddating"]
-	path = home/.vim/bundle_storage/vim-speeddating
-	url = https://github.com/tpope/vim-speeddating.git
 [submodule "home/.vim/bundle_storage/vim-surround"]
 	path = home/.vim/bundle_storage/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -118,9 +91,6 @@
 [submodule "home/.vim/bundle_storage/supertab"]
 	path = home/.vim/bundle_storage/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "home/.vim/bundle_storage/clang_complete"]
-	path = home/.vim/bundle_storage/clang_complete
-	url = https://github.com/Rip-Rip/clang_complete.git
 [submodule "home/.vim/bundle_storage/vim-stylus"]
 	path = home/.vim/bundle_storage/vim-stylus
 	url = https://github.com/wavded/vim-stylus.git

@@ -58,7 +58,7 @@ To pull upstream changes for all of the submodules run the following:
 
 Plug-ins are managed using [pathogen][pathogen]. All submodule plug-ins are stored in the `bundle_storage` directory and are not available to Vim until they are symlinked to the `bundle` directory. The `bundle` directory is ignored by the repository allowing custom configurations on a per install basis. To activate a plug-in run:
 
-    ln -s ~/path/to/vimfiles/bundle_storage/bundle-name ~/path/to/vimfiles/bundle/bundle-name
+    bash add_bundle.sh <bundle-name>
 
 You'll need to restart Vim for the changes to take effect.
 
@@ -70,7 +70,7 @@ New plug-ins need to be added to the `bundle_storage` directory and should be tr
     git submodule add <remote_repository> <home/.vim/bundle_storage/bundle-name>
     git submodule init
     git submodule update
-    ln -s ~/path/to/vimfiles/bundle_storage/bundle-name ~/path/to/vimfiles/bundle/bundle-name
+    bash add_bundle.sh <bundle-name>
 
 Test it out and if it's a keeper, add it to the repository, add it to the list below with a quick description and tell the world about it's greatness.
 
@@ -93,18 +93,22 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 
 - [ack.vim](https://github.com/mileszs/ack.vim/blob/master/doc/ack.txt)
 - [browser-refresh.vim](https://github.com/mkitt/browser-refresh.vim/blob/master/doc/browser-refresh.txt)
-- [cocoa.vim](https://github.com/msanders/cocoa.vim/blob/master/doc/cocoa.txt)
+- [bufkill.vim](https://github.com/vim-scripts/bufkill.vim)
+- [delimitMate](https://github.com/Raimondi/delimitMate)
 - [gist-vim](https://github.com/mattn/gist-vim)
+- [gundo](https://github.com/vim-scripts/Gundo/blob/master/doc/gundo.txt)
+- [indexed-search.vim](https://github.com/vim-scripts/IndexedSearch)
 - [jade.vim](https://github.com/vim-scripts/jade.vim)
 - [json.vim](https://github.com/vim-scripts/JSON.vim)
+- [lustyjuggler](https://github.com/vim-scripts/LustyJuggler)
 - [markdown-preview.vim](https://github.com/mkitt/markdown-preview.vim/blob/master/doc/markdown-preview.txt)
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter/blob/master/doc/NERD_commenter.txt)
 - [nerdtree](https://github.com/scrooloose/nerdtree/blob/master/doc/NERD_tree.txt)
-- [processing.vim](https://github.com/vim-scripts/Processing)
 - [snipmate.vim](https://github.com/msanders/snipmate.vim/blob/master/doc/snipMate.txt)
 - [statusline](https://github.com/factorylabs/vimfiles/blob/master/home/.vim/bundle_storage/statusline/doc/statusline.txt)
 - [supertab](https://github.com/ervandew/supertab/blob/master/doc/supertab.txt)
 - [syntastic](https://github.com/scrooloose/syntastic/blob/master/doc/syntastic.txt)
+- [tabular](https://github.com/godlygeek/tabular/blob/master/doc/Tabular.txt)
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim/blob/master/doc/taglist.txt)
 - [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 - [vim-cucumber](https://github.com/tpope/vim-cucumber)
@@ -113,37 +117,18 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 - [vim-javascript](https://github.com/pangloss/vim-javascript)
 - [vim-markdown](https://github.com/tpope/vim-markdown)
 - [vim-rails](https://github.com/tpope/vim-rails/blob/master/doc/rails.txt)
+- [vim-repeat](https://github.com/tpope/vim-repeat)
 - [vim-ruby](https://github.com/vim-ruby/vim-ruby/tree/master/doc)
 - [vim-rvm](https://github.com/tpope/vrim-rvm)
 - [vim-stylus](https://github.com/wavded/vim-stylus)
+- [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt)
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt)
 - [yankring](https://github.com/chrismetcalf/vim-yankring/blob/master/doc/yankring.txt)
 
 
-### Additional Plug-Ins
+**\*\* - TBD**
 
-These are the additional plug-ins included, but are not required. They are not linked to the `bundle` directory out of the box. If adding any of these, make sure to read the docs on their usage and what variables/settings may be required in `.vimrc.local`
-
-- [autocomplpop.vim](https://github.com/vim-scripts/AutoComplPop/blob/master/doc/acp.txt) - Live completion as you type, this can slow Vim down, but is useful in certain situations
-- [autocorrect.vim](https://github.com/vim-scripts/autocorrect.vim) - Corrects misspellings as you type i.e. teh -> the \*\*
-- [bufkill.vim](https://github.com/vim-scripts/bufkill.vim) - Unload, delete or wipe a buffer
-- [camelcasemotion](https://github.com/vim-scripts/camelcasemotion/blob/master/doc/camelcasemotion.txt) - Motion commands for moving between camelCase or words\_with\_underscores \*\*
-- [clang-complete](https://github.com/Rip-Rip/clang_complet://github.com/Rip-Rip/clang_complete) - Use clang for completing C/C++ code.
-- [colorsel.vim](https://github.com/vim-scripts/colorsel.vim/blob/master/doc/colorsel.txt) - Interactive RGB/HSV color selector
-- [delimitMate](https://github.com/Raimondi/delimitMate) - Automatic closing of quotes, parenthesis, brackets, etc. \*\*
-- [gundo](https://github.com/vim-scripts/Gundo/blob/master/doc/gundo.txt) - Graph Vim's undo tree so it is actually usable
 - [html-autoclose.vim](https://github.com/vim-scripts/HTML-AutoCloseTag) - Automatically closes HTML tags, doesn't play well with the delimitMate plugin
-- [indexed-search.vim](https://github.com/vim-scripts/IndexedSearch) - Adds visual cues when performing searches within a file \*\*
-- [lustyjuggler](https://github.com/vim-scripts/LustyJuggler) - Enables a window for navigating through open buffers
-- [tabular](https://github.com/godlygeek/tabular/blob/master/doc/Tabular.txt) - Configurable, flexible, intuitive text aligning \*\*
-- [tailminusf](https://github.com/vim-scripts/TailMinusF/blob/master/doc/tailminusf.txt) - Watch the contents of a file in real time
-- [vim-ragtag](https://github.com/tpope/vim-ragtag/blob/master/doc/ragtag.txt) - Ghetto XML/HTML mappings
-- [vim-repeat](https://github.com/tpope/vim-repeat) - Enable repeating commands mapped to "." \*\*
-- [vim-speeddating](https://github.com/tpope/vim-speeddating/blob/master/doc/speeddating.txt) - Use CTRL-A/CTRL-X to increment dates, times, and more
-- [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt) - Delete, change, and add "surroundings" i.e. parentheses, quotes, and HTML tags \*\*
-
-**\*\* - Recommended!**
-
 
 ## Snippets
 
@@ -215,17 +200,17 @@ In order to keep your personal submodules available to forks but allow commits b
 
 Here is an example:
 
-    cd ~/.homesick/repos/vimfiles/
+    cd <path>/vimfiles/
     git submodule add git://github.com/username/submodule-name.vim.git home/.vim/bundle_storage/submodule-name.vim
     cd home/.vim/bundle_storage/submodule-name.vim/
     git remote add push git@github.com:username/submodule-name.vim.git
     git submodule init
     git submodule update
-    ln -s ~/path/to/vimfiles/bundle_storage/submodule-name.vim ~/path/to/vimfiles/bundle/submodule-name.vim
+    bash add_bundle <bundle-name>
 
 Then whenever you make changes to the submodule:
 
-    cd ~/.homesick/repos/vimfiles/home/.vim/bundle_storage/submodule-name.vim/
+    cd <path>/vimfiles/
     git push push master
 
 This allows you to make changes directly in your submodule, see the effects and push the changes back without maintaining multiple repositories and linking them back and forth. [Defunkt][defunkt] has a good article about [working with submodules][defunkt-subs].

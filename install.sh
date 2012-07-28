@@ -2,16 +2,17 @@
 default_bundles=(
   ack.vim
   browser-refresh.vim
+  bufkill.vim
+  delimitMate
   gist-vim
+  gundo
+  indexed-search.vim
   jade.vim
   json.vim
-  html-autoclose.vim
   lustyjuggler
   markdown-preview.vim
   nerdcommenter
   nerdtree
-  processing.vim
-  vim-rvm
   snipmate.vim
   statusline
   supertab
@@ -25,10 +26,12 @@ default_bundles=(
   vim-javascript
   vim-markdown
   vim-rails
+  vim-repeat
   vim-ruby
+  vim-rvm
   vim-stylus
-  vim-unimpaired
   vim-surround
+  vim-unimpaired
   yankring
 )
 
