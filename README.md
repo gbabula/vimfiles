@@ -252,9 +252,9 @@ OTHER DEALINGS IN THE SOFTWARE.
 [ctags]: http://ctags.sourceforge.net/
 [discount]: http://www.pell.portland.or.us/~orc/Code/discount/
 [vim-scripts]: https://github.com/vim-scripts
-[install.sh]: https://github.com/factorylabs/vimfiles/blob/master/install.sh
-[update.sh]: https://github.com/factorylabs/vimfiles/blob/master/update.sh
-[clean.sh]: https://github.com/factorylabs/vimfiles/blob/master/clean.sh
+[install.sh]: https://github.com/tlee/vimfiles/blob/master/install.sh
+[update.sh]: https://github.com/tlee/vimfiles/blob/master/update.sh
+[clean.sh]: https://github.com/tlee/vimfiles/blob/master/clean.sh
 [closure]: http://code.google.com/p/closure-linter/
 [jslint]: http://www.jslint.com/lint.html
 [syntastic]: https://github.com/scrooloose/syntastic
