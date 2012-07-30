@@ -105,9 +105,6 @@ endfunction
 
 " Key mapping
 " -----------------------------------------------------------------------------
-nnoremap j gj
-nnoremap k gk
-nnoremap ; :
 inoremap jj <ESC>
 inoremap jk <Esc>
 
@@ -123,7 +120,6 @@ vmap <tab> %
 
 " Insert/append a single character
 nmap ,, i_<esc>r
-nmap ;; a_<esc>r
 
 " Clear the search highlight
 map <silent> \ :silent nohlsearch<cr>

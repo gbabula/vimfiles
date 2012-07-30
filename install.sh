@@ -32,7 +32,7 @@ default_bundles=(
   vim-stylus
   vim-surround
   vim-unimpaired
-  yankring
+  YankRing.vim
 )
 
 full_path=`pwd`

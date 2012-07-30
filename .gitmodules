@@ -82,9 +82,6 @@
 [submodule "home/.vim/bundle_storage/vim-unimpaired"]
 	path = home/.vim/bundle_storage/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "home/.vim/bundle_storage/yankring"]
-	path = home/.vim/bundle_storage/yankring
-	url = https://github.com/chrismetcalf/vim-yankring.git
 [submodule "home/.vim/bundle_storage/delimitMate"]
 	path = home/.vim/bundle_storage/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
@@ -100,3 +97,6 @@
 [submodule "home/.vim/bundle_storage/vim-rvm"]
 	path = home/.vim/bundle_storage/vim-rvm
 	url = https://github.com/tpope/vim-rvm.git
+[submodule "home/.vim/bundle_storage/YankRing.vim"]
+	path = home/.vim/bundle_storage/YankRing.vim
+	url = https://github.com/vim-scripts/YankRing.vim.git
