@@ -123,7 +123,7 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 - [vim-stylus](https://github.com/wavded/vim-stylus)
 - [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt)
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt)
-- [yankring](https://github.com/chrismetcalf/vim-yankring/blob/master/doc/yankring.txt)
+- [yankring](https://github.com/vim-scripts/YankRing.vim/blob/master/doc/yankring.txt)
 
 
 **\*\* - TBD**
