@@ -178,6 +178,21 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 " Closes the window showing the location list from sytastic errors
 map <silent><leader>lc :lcl<cr>
 
+" Window movement
+map <leader>wk <C-w>K
+map <leader>wj <C-w>J
+map <leader>wl <C-w>L
+map <leader>wh <C-w>H
+map <leader>wr <C-w>r
+map <leader>wR <C-w>R
+map <leader>wx <C-w>x
+
+"Resizing
+map <leader>> <C-w>>10
+map <leader>< <C-w><10
+map <leader>+ <C-w>+10
+map <leader>- <C-w>-10
+map <leader>= <C-w>=
 
 " File type utility settings
 " -----------------------------------------------------------------------------
