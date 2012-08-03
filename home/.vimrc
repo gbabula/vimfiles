@@ -105,8 +105,8 @@ endfunction
 
 " Key mapping
 " -----------------------------------------------------------------------------
-inoremap jj <ESC>
-inoremap jk <Esc>
+" Better placement
+inoremap jj <ESC> l
 
 " Move between splits
 map <C-h> <C-w>h
