@@ -110,6 +110,7 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 - [syntastic](https://github.com/scrooloose/syntastic/blob/master/doc/syntastic.txt)
 - [tabular](https://github.com/godlygeek/tabular/blob/master/doc/Tabular.txt)
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim/blob/master/doc/taglist.txt)
+- [vcscommand.vim](https://github.com/vim-scripts/vcscommand.vim)
 - [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 - [vim-cucumber](https://github.com/tpope/vim-cucumber)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive/blob/master/doc/fugitive.txt)

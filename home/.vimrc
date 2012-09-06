@@ -288,7 +288,7 @@ endif
 
 syntax on
 set background=dark
-colorscheme solarized
+colorscheme solarizedlt
 
 " Set the title bar to something meaningful
 if has('title') && (has('gui_running') || &title)
@@ -304,4 +304,5 @@ endif
 " -----------------------------------------------------------------------------
 let g:yankring_history_dir=$HOME.'/.vim/tmp/yankring/'
 let g:RefreshRunningBrowserDefault = 'chrome'
+let g:LustyJugglerSuppressRubyWarning = 1
 

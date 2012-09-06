@@ -100,3 +100,6 @@
 [submodule "home/.vim/bundle_storage/YankRing.vim"]
 	path = home/.vim/bundle_storage/YankRing.vim
 	url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule "home/.vim/bundle_storage/vcscommand.vim"]
+	path = home/.vim/bundle_storage/vcscommand.vim
+	url = https://github.com/vim-scripts/vcscommand.vim.git

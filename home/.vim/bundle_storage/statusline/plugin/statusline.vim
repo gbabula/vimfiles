@@ -72,7 +72,7 @@ set statusline+=%*
 set statusline+=%{fugitive#statusline()}
 
 " Show the rubies courtesty of rvm.vim
-set statusline+=%{rvm#statusline()}
+" set statusline+=%{rvm#statusline()}
 
 set statusline+=%#error#                            "display a warning if &et is wrong, or we have mixed-indenting
 set statusline+=%{StatuslineTabWarning()}           "warnings for mixed tabs and other issues
