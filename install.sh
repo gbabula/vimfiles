@@ -19,6 +19,7 @@ default_bundles=(
   syntastic
   tabular
   taglist.vim
+  vcscommand.vim
   vim-coffee-script
   vim-cucumber
   vim-fugitive
