@@ -26,10 +26,7 @@ default_bundles=(
   vim-haml
   vim-javascript
   vim-markdown
-  vim-rails
   vim-repeat
-  vim-ruby
-  vim-rvm
   vim-stylus
   vim-surround
   vim-unimpaired
@@ -53,20 +50,20 @@ git submodule foreach git clean -f
 
 echo "Symlinking default bundles..."
 for i in "${default_bundles[@]}"; do
-  ln -sv $full_path/home/.vim/bundle_storage/$i $full_path/home/.vim/bundle/$i
+  ln -s $full_path/home/.vim/bundle_storage/$i $full_path/home/.vim/bundle/$i
 done
 
 
 echo "Symlinking default snippets..."
 for f in `ls $full_path/home/.vim/snippets_storage/`; do
-  ln -sv $full_path/home/.vim/snippets_storage/$f $full_path/home/.vim/snippets/$f
+  ln -s $full_path/home/.vim/snippets_storage/$f $full_path/home/.vim/snippets/$f
 done
 
 # Make an additional symlink of css for scss
-ln -sv $full_path/home/.vim/snippets_storage/css.snippets $full_path/home/.vim/snippets/scss.snippets
+ln -s $full_path/home/.vim/snippets_storage/css.snippets $full_path/home/.vim/snippets/scss.snippets
 
 echo "Symlinking to home directory, dot files -A"
 for f in `ls -A $full_path/home/`; do
-  ln -sv $full_path/home/$f $HOME/$f
+  ln -s $full_path/home/$f $HOME/$f
 done
 
