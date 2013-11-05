@@ -103,3 +103,6 @@
 [submodule "home/.vim/bundle_storage/vcscommand.vim"]
 	path = home/.vim/bundle_storage/vcscommand.vim
 	url = https://github.com/vim-scripts/vcscommand.vim.git
+[submodule "home/.vim/bundle_storage/vim-slim"]
+	path = home/.vim/bundle_storage/vim-slim
+	url = https://github.com/slim-template/vim-slim.git
