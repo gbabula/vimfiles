@@ -31,9 +31,12 @@ set number
 set title
 set laststatus=2
 set splitbelow splitright
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+autocmd User Rails/**/* set tabstop=4
+autocmd User Rails/**/* set shiftwidth=4
+autocmd User Rails/**/* set softtabstop=4
 set smarttab
 set expandtab
 set nowrap
@@ -141,6 +144,12 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
+" copy paste
+vmap <leader>1 :!pbcopy<CR>
+vmap <leader>2 :!pbcopy<BAR>pbpaste<CR>
+vmap <leader>3 :r !pbpaste<CR>
+
+
 " Leader mapping
 " -----------------------------------------------------------------------------
 map <leader>a :Ack
@@ -193,6 +202,8 @@ map <leader>< <C-w><10
 map <leader>+ <C-w>+10
 map <leader>- <C-w>-10
 map <leader>= <C-w>=
+map <leader>mh <C-w>_
+map <leader>m <C-w>
 
 " File type utility settings
 " -----------------------------------------------------------------------------
@@ -258,12 +269,13 @@ if !exists("autocommands_loaded")
   au BufRead,BufNewFile *.m*down set filetype=markdown
   au BufRead,BufNewFile *.as set filetype=actionscript
   au BufRead,BufNewFile *.json set filetype=json
+  au BufRead,BufNewFile *.slim set filetype=slim
 
   " Call the file type utility methods
   au BufRead,BufNewFile *.txt call s:setWrapping()
   au BufRead,BufNewFile *.md,*.markdown,*.mkd call s:setMarkdown()
   au BufRead,BufNewFile *.css,*.scss call s:setCSS()
-  au BufRead,BufNewFile *.html,*.js,*.haml,*.erb call s:setBrowserEnv()
+  au BufRead,BufNewFile *.html,*.js,*.haml,*.erb,*.slim call s:setBrowserEnv()
   au User Rails call s:setRails()
 
   " Reload all snippets when creating new ones.
@@ -288,7 +300,7 @@ endif
 
 syntax on
 set background=dark
-colorscheme solarizedlt
+colorscheme colorblind
 
 " Set the title bar to something meaningful
 if has('title') && (has('gui_running') || &title)
