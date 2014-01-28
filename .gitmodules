@@ -109,3 +109,6 @@
 [submodule "home/.vim/bundle_storage/vim-less"]
 	path = home/.vim/bundle_storage/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule "home/.vim/bundle_storage/puppet"]
+	path = home/.vim/bundle_storage/puppet
+	url = git://github.com/rodjek/vim-puppet.git
