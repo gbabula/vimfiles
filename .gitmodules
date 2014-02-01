@@ -112,3 +112,6 @@
 [submodule "home/.vim/bundle_storage/puppet"]
 	path = home/.vim/bundle_storage/puppet
 	url = git://github.com/rodjek/vim-puppet.git
+[submodule "home/.vim/bundle_storage/vim-hemisu"]
+	path = home/.vim/bundle_storage/vim-hemisu
+	url = https://github.com/tlee/vim-hemisu.git
