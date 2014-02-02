@@ -28,18 +28,12 @@
 [submodule "home/.vim/bundle_storage/json.vim"]
 	path = home/.vim/bundle_storage/json.vim
 	url = https://github.com/vim-scripts/JSON.vim.git
-[submodule "home/.vim/bundle_storage/lustyjuggler"]
-	path = home/.vim/bundle_storage/lustyjuggler
-	url = https://github.com/vim-scripts/LustyJuggler.git
 [submodule "home/.vim/bundle_storage/markdown-preview.vim"]
 	path = home/.vim/bundle_storage/markdown-preview.vim
 	url = https://github.com/mkitt/markdown-preview.vim.git
 [submodule "home/.vim/bundle_storage/nerdcommenter"]
 	path = home/.vim/bundle_storage/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "home/.vim/bundle_storage/nerdtree"]
-	path = home/.vim/bundle_storage/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "home/.vim/bundle_storage/snipmate.vim"]
 	path = home/.vim/bundle_storage/snipmate.vim
 	url = https://github.com/msanders/snipmate.vim.git
@@ -115,3 +109,12 @@
 [submodule "home/.vim/bundle_storage/vim-hemisu"]
 	path = home/.vim/bundle_storage/vim-hemisu
 	url = https://github.com/tlee/vim-hemisu.git
+[submodule "home/.vim/bundle_storage/vim-vinegar"]
+	path = home/.vim/bundle_storage/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
+[submodule "home/.vim/bundle_storage/minibufexpl.vim"]
+	path = home/.vim/bundle_storage/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "home/.vim/bundle_storage/ctrlp.vim"]
+	path = home/.vim/bundle_storage/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
