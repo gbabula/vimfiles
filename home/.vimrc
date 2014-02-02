@@ -22,8 +22,7 @@ set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
-set noerrorbells
-set novisualbell
+set vb t_vb=
 set ttyfast
 set ruler
 set backspace=indent,eol,start
@@ -75,7 +74,6 @@ command! -nargs=* Wrap set wrap linebreak nolist
 " Plugin configurations
 " -----------------------------------------------------------------------------
 let NERDSpaceDelims=1
-let NERDTreeIgnore=['.DS_Store']
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_disabled_filetypes = ['scss']
@@ -90,6 +88,11 @@ let g:SuperTabLongestEnhanced = 1
 
 " Tell snipmate to pull it's snippets from a custom directory
 let g:snippets_dir = $HOME.'/.vim/snippets/'
+
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let g:tlist_javascript_settings = 'javascript;r:var;s:string;a:array;o:object;u:function'
+let g:yankring_history_dir=$HOME.'/.vim/tmp/yankring/'
+let g:RefreshRunningBrowserDefault = 'chrome'
 
 
 " Commands and helper functions
@@ -128,7 +131,7 @@ nmap ,, i_<esc>r
 map <silent> \ :silent nohlsearch<cr>
 
 " <F1> toggles fullscreen in gui
-map <F2> :NERDTreeToggle<cr>
+nnoremap <F2> :GundoToggle<cr>
 nnoremap <silent> <F3> :TlistToggle<cr>
 nnoremap <silent> <F4> :YRShow<cr>
 ino <silent> <F5> <c-r>=ShowAvailableSnips()<cr>
@@ -270,12 +273,14 @@ if !exists("autocommands_loaded")
   au BufRead,BufNewFile *.as set filetype=actionscript
   au BufRead,BufNewFile *.json set filetype=json
   au BufRead,BufNewFile *.slim set filetype=slim
+  " Refresh on save
+  au! BufWritePost *.html,*.js,*.jsp,*.haml,*.erb,*.slim call RefreshRunningBrowser()
 
   " Call the file type utility methods
   au BufRead,BufNewFile *.txt call s:setWrapping()
   au BufRead,BufNewFile *.md,*.markdown,*.mkd call s:setMarkdown()
   au BufRead,BufNewFile *.css,*.scss call s:setCSS()
-  au BufRead,BufNewFile *.html,*.js,*.haml,*.erb,*.slim call s:setBrowserEnv()
+  au BufNewFile,BufWritePost *.html,*.js,*.haml,*.erb,*.slim call s:setBrowserEnv()
   au User Rails call s:setRails()
 
   " Reload all snippets when creating new ones.
@@ -288,33 +293,16 @@ if !exists("autocommands_loaded")
   autocmd FileType * if exists("+completefunc") && &completefunc == "" | setlocal completefunc=syntaxcomplete#Complete | endif
   autocmd FileType * if exists("+omnifunc") && &omnifunc == "" | setlocal omnifunc=syntaxcomplete#Complete | endif
 
-endif
+  " Remove auto commenting - annoying
+  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+
+endif
 
 
 " Themes and GUI settings
 " -----------------------------------------------------------------------------
-if $TERM == 'xterm-color' && &t_Co == 8
-  set t_Co=16
-endif
-
+set term=xterm-256color
 syntax on
-set background=dark
-colorscheme colorblind
-
-" Set the title bar to something meaningful
-if has('title') && (has('gui_running') || &title)
-  set titlestring=
-  set titlestring+=%f\                                             " file name
-  set titlestring+=%h%m%r%w                                        " flags
-  set titlestring+=\ -\ %{v:progname}                              " program name
-  set titlestring+=\ -\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')} " working directory
-endif
-
-
-" Customizations
-" -----------------------------------------------------------------------------
-let g:yankring_history_dir=$HOME.'/.vim/tmp/yankring/'
-let g:RefreshRunningBrowserDefault = 'chrome'
-let g:LustyJugglerSuppressRubyWarning = 1
-
+set background=light
+colorscheme hemisu
