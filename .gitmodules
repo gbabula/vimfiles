@@ -43,9 +43,6 @@
 [submodule "home/.vim/bundle_storage/tabular"]
 	path = home/.vim/bundle_storage/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "home/.vim/bundle_storage/taglist.vim"]
-	path = home/.vim/bundle_storage/taglist.vim
-	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "home/.vim/bundle_storage/vim-cucumber"]
 	path = home/.vim/bundle_storage/vim-cucumber
 	url = https://github.com/tpope/vim-cucumber.git
@@ -115,3 +112,6 @@
 [submodule "home/.vim/bundle_storage/ctrlp.vim"]
 	path = home/.vim/bundle_storage/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "home/.vim/bundle_storage/tagbar"]
+	path = home/.vim/bundle_storage/tagbar
+	url = https://github.com/majutsushi/tagbar
