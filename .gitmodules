@@ -76,9 +76,6 @@
 [submodule "home/.vim/bundle_storage/vim-unimpaired"]
 	path = home/.vim/bundle_storage/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "home/.vim/bundle_storage/delimitMate"]
-	path = home/.vim/bundle_storage/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
 [submodule "home/.vim/bundle_storage/supertab"]
 	path = home/.vim/bundle_storage/supertab
 	url = https://github.com/ervandew/supertab.git

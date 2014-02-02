@@ -94,7 +94,6 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 - [ack.vim](https://github.com/mileszs/ack.vim/blob/master/doc/ack.txt)
 - [browser-refresh.vim](https://github.com/mkitt/browser-refresh.vim/blob/master/doc/browser-refresh.txt)
 - [bufkill.vim](https://github.com/vim-scripts/bufkill.vim)
-- [delimitMate](https://github.com/Raimondi/delimitMate)
 - [gist-vim](https://github.com/mattn/gist-vim)
 - [gundo](https://github.com/vim-scripts/Gundo/blob/master/doc/gundo.txt)
 - [indexed-search.vim](https://github.com/vim-scripts/IndexedSearch)

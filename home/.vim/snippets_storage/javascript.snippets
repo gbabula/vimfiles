@@ -1,42 +1,41 @@
 # Native JS
 # -----------------------------------------------------------------------------
 snippet proto
-	${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
+	${1:class_name}.prototype.${2:method_name} = function( ${3:first_argument} ) {
 		${4:// body...}
 	};
 snippet fun
-	function ${1:function_name}(${2:argument}) {
+	function ${1:function_name}( ${2:argument} ) {
 		${3:// body...}
 	}
 snippet anon
-	(function() {
+	( function() {
 		${1:// body}
-	}());
+	}() );
 snippet fa
-	function() {
-		${1:// body}
+	function ( ${1:first_argumet} ) {
+		${2:// body}
 	}
 snippet vf
-	var ${1:var_name} = function(${2:argument}) {
+	var ${1:var_name} = function( ${2:argument} ) {
 		${3:// body...}
 	};
 snippet f
-	function(${1}) {${2}}
+	function( ${1} ) {${2}}
 snippet if
-	if (${1:true}) {
+	if ( ${1:true} ) {
 		${2}
 	}
 snippet ife
-	if (${1:true}) {
+	if ( ${1:true} ) {
 		${2}
-	}
-	else {
+	} else {
 		${3}
 	}
 snippet ter
-	(${1:/* condition */}) ? ${2:a} : ${3:b};
+	( ${1:/* condition */} ) ? ${2:a} : ${3:b};
 snippet switch
-	switch (${1:expression}) {
+	switch ( ${1:expression} ) {
 		case '${3:case}':
 			${4:// code}
 			break;
@@ -50,45 +49,45 @@ snippet case
 		break;
 	${3}
 snippet for
-	for (var ${2:i} = 0, ${3:len} = ${1:Things}.length; $2 < $3; $2 += 1) {
+	for ( var ${2:i} = 0, ${3:len} = ${1:Things}.length; $2 < $3; $2 += 1 ) {
 		${4:$1[$2]};
 	}
 snippet forr
-	for (var ${2:i} = ${1:Things}.length - 1; $2 >= 0; $2${3: -= 1}) {
+	for ( var ${2:i} = ${1:Things}.length - 1; $2 >= 0; $2${3: -= 1} ) {
 		${4:$1[$2]};
 	}
 snippet while
-	while (${1:/* condition */}) {
+	while ( ${1:/* condition */} ) {
 		${2:/* code */}
 	}
 snippet do
-	do {))
+	do {) )
 		${2:/* code */}
-	} while (${1:/* condition */});
+	} while ( ${1:/* condition */ } );
 snippet :f
-	${1:method_name}: function(${2:attribute}) {
+	${1:method_name}: function( ${2:attribute} ) {
 		${4}
 	}${3:,}
 snippet :,
 	${1:value_name}: ${2:value}${3:,}
 snippet timeout
-	setTimeout(function() {
+	setTimeout( function() {
 		${2}
-	}, ${1:ms});
+	}, ${1:ms} );
 snippet interval
-	setInterval(function() {
+	setInterval( function() {
 		${2}
-	}, ${1:ms});
+	}, ${1:ms} );
 snippet getBy
 	getElementsBy${1:Id/TagName}('${2}');
 snippet callback
-	(function () {
+	( function () {
 		${1:// body...}
-	}());
+	}() );
 snippet hr
 	// ----------------------------------------------------------------------------
 snippet self
-	var self = this;${1}
+	var self = this; ${1}
 snippet comb
 	/**
 	 * ${1:Description}
@@ -100,7 +99,7 @@ snippet :error
 snippet trace
 	console.log('${1:var} is ' + $1);${2}
 snippet :inspect
-	for (var ${1:prop} in ${2:obj}) {
+	for ( var ${1:prop} in ${2:obj} ) {
 		console.log($1 + ': ' + $2[$1]);${3}
 	}
 snippet lint
@@ -112,7 +111,7 @@ snippet throw
 snippet try
 	try {
 		${1}
-	} catch (err) {
+	} catch ( err ) {
 		${2}
 	}
 snippet var
