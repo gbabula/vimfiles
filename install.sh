@@ -9,7 +9,6 @@ default_bundles=(
   indexed-search.vim
   jade.vim
   json.vim
-  lustyjuggler
   markdown-preview.vim
   nerdcommenter
   nerdtree
@@ -25,6 +24,7 @@ default_bundles=(
   vim-fugitive
   vim-haml
   vim-javascript
+  vim-less
   vim-markdown
   vim-rails
   vim-repeat

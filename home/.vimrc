@@ -1,4 +1,3 @@
-
 " Disable vi compatibility
 set nocompatible
 
@@ -11,6 +10,7 @@ filetype plugin indent on
 
 " Preferences
 " -----------------------------------------------------------------------------
+set colorcolumn=95
 set modelines=0
 set encoding=utf-8
 set scrolloff=3
@@ -41,7 +41,7 @@ set expandtab
 set nowrap
 set list
 set listchars=tab:▸\ ,eol:¬,trail:·
-set foldlevelstart=0
+" set foldlevelstart=3
 set foldmethod=marker
 set formatoptions=tcq
 set autowrite
@@ -74,9 +74,10 @@ command! -nargs=* Wrap set wrap linebreak nolist
 " Plugin configurations
 " -----------------------------------------------------------------------------
 let NERDSpaceDelims=1
+
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
-let g:syntastic_disabled_filetypes = ['scss']
+let g:syntastic_html_checkers=['']
 
 " Popup menu behavior
 set completeopt=longest,menu
@@ -94,12 +95,16 @@ let g:tlist_javascript_settings = 'javascript;r:var;s:string;a:array;o:object;u:
 let g:yankring_history_dir=$HOME.'/.vim/tmp/yankring/'
 let g:RefreshRunningBrowserDefault = 'chrome'
 
+" Settings for vim-javascript
+let b:javascript_enable_domhtmlcss = 1
+let b:javascript_fold = 0
+let b:javascript_conceal = 0
 
 " Commands and helper functions
 " -----------------------------------------------------------------------------
 
 " Sort CSS properties between the braces alphabetically
-:command! SortCSS :g#\({\n\)\@<=#.,/}/sort | :noh
+:command SortCSS :g#\({\n\)\@<=#.,/}/sort | :noh
 
 " Let Google Linter autofix the js errors in the current buffer
 function! FixJS()
@@ -268,19 +273,20 @@ if !exists("autocommands_loaded")
   au! BufWritePost .vimrc.local source ~/.vimrc
 
   " File type settings on load
+  au BufRead,BufNewFile *.less set filetype=less
   au BufRead,BufNewFile *.scss set filetype=scss
   au BufRead,BufNewFile *.m*down set filetype=markdown
   au BufRead,BufNewFile *.as set filetype=actionscript
   au BufRead,BufNewFile *.json set filetype=json
   au BufRead,BufNewFile *.slim set filetype=slim
   " Refresh on save
-  au! BufWritePost *.html,*.js,*.jsp,*.haml,*.erb,*.slim call RefreshRunningBrowser()
+  au BufWritePost *.html,*.js,*.jsp,*.haml,*.erb,*.slim,*.css,*.less call RefreshRunningBrowser()
 
   " Call the file type utility methods
   au BufRead,BufNewFile *.txt call s:setWrapping()
   au BufRead,BufNewFile *.md,*.markdown,*.mkd call s:setMarkdown()
-  au BufRead,BufNewFile *.css,*.scss call s:setCSS()
-  au BufNewFile,BufWritePost *.html,*.js,*.haml,*.erb,*.slim call s:setBrowserEnv()
+  au BufRead,BufNewFile *.css,*.scss,*.less call s:setCSS()
+  au BufNewFile,BufWritePost *.html,*.css,*.less,*.js,*.haml,*.erb,*.slim call s:setBrowserEnv()
   au User Rails call s:setRails()
 
   " Reload all snippets when creating new ones.
@@ -304,5 +310,7 @@ endif
 " -----------------------------------------------------------------------------
 set term=xterm-256color
 syntax on
+
 set background=light
+
 colorscheme hemisu

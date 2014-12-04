@@ -31,6 +31,9 @@
 [submodule "home/.vim/bundle_storage/markdown-preview.vim"]
 	path = home/.vim/bundle_storage/markdown-preview.vim
 	url = https://github.com/mkitt/markdown-preview.vim.git
+[submodule "home/.vim/bundle_storage/nerdtree"]
+	path = home/.vim/bundle_storage/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "home/.vim/bundle_storage/nerdcommenter"]
 	path = home/.vim/bundle_storage/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -55,6 +58,9 @@
 [submodule "home/.vim/bundle_storage/vim-javascript"]
 	path = home/.vim/bundle_storage/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "home/.vim/bundle_storage/vim-less"]
+	path = home/.vim/bundle_storage/vim-less
+	url = https://github.com/lunaru/vim-less.git
 [submodule "home/.vim/bundle_storage/vim-markdown"]
 	path = home/.vim/bundle_storage/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git

@@ -1,13 +1,13 @@
-# tlee Vim Configuration
+# gbabula Vim Configuration
 
-Head start courtesy of F/.
+Based on [tlee/vimfiles](https://github.com/tlee/vimfiles)
 
 
 ## Installation
 
 To install the files and default configuration run the following:
 
-    git clone https://github.com/tlee/vimfiles.git 
+    git clone https://github.com/gbabula/vimfiles.git 
     cd vimfiles
     bash install.sh
 
@@ -101,11 +101,11 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 - [json.vim](https://github.com/vim-scripts/JSON.vim)
 - [markdown-preview.vim](https://github.com/mkitt/markdown-preview.vim/blob/master/doc/markdown-preview.txt)
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter/blob/master/doc/NERD_commenter.txt)
+- [nerdtree] (https://github.com/scrooloose/nerdtree)
 - [ctrlp](https://github.com/kien/ctrlp.vim)
 - [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [vim-vinegar](https://github.com/tpope/vim-vinegar)
 - [snipmate.vim](https://github.com/msanders/snipmate.vim/blob/master/doc/snipMate.txt)
-- [statusline](https://github.com/factorylabs/vimfiles/blob/master/home/.vim/bundle_storage/statusline/doc/statusline.txt)
 - [supertab](https://github.com/ervandew/supertab/blob/master/doc/supertab.txt)
 - [syntastic](https://github.com/scrooloose/syntastic/blob/master/doc/syntastic.txt)
 - [tagbar](https://github.com/majutsushi/tagbar)
@@ -116,6 +116,7 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 - [vim-fugitive](https://github.com/tpope/vim-fugitive/blob/master/doc/fugitive.txt)
 - [vim-haml](https://github.com/tpope/vim-haml)
 - [vim-javascript](https://github.com/pangloss/vim-javascript)
+- [vim-less](https://github.com/groenewege/vim-less)
 - [vim-markdown](https://github.com/tpope/vim-markdown)
 - [vim-rails](https://github.com/tpope/vim-rails/blob/master/doc/rails.txt)
 - [vim-repeat](https://github.com/tpope/vim-repeat)
