@@ -2,18 +2,16 @@
 
 Based on [tlee/vimfiles](https://github.com/tlee/vimfiles)
 
-![theme](http://cdn.img42.com/6a7898bdf07c6ed358332c2f4daf9edd.png)
+![theme](http://oi61.tinypic.com/347i879.jpg)
 
 
 ## Installation
 
 To install the files and default configuration run the following:
 
-    ```
     git clone https://github.com/gbabula/vimfiles.git 
     cd vimfiles
     bash install.sh
-    ```
 
 
 ### Default Plug-Ins
