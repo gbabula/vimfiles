@@ -1,90 +1,19 @@
-# gbabula Vim Configuration
+# gbabula/vimfiles
 
 Based on [tlee/vimfiles](https://github.com/tlee/vimfiles)
+
+![theme](http://cdn.img42.com/6a7898bdf07c6ed358332c2f4daf9edd.png)
 
 
 ## Installation
 
 To install the files and default configuration run the following:
 
+    ```
     git clone https://github.com/gbabula/vimfiles.git 
     cd vimfiles
     bash install.sh
-
-This will install the default configuration files/directories, submodules, and create symbolic links for bundles and snippets. Most of the heavy lifting is done by the [install script][install.sh].
-
-At this point you should have a default setup ready to rock. You're going to want to tune it a bit to your environment, so go forth and "Pimp Your Ride".
-
-
-## Pimp Your Ride
-
-You'll want to tune a few settings right off the bat. Open the `.vimrc` file
-
-1. Uncomment `g:yankring_history_dir` and optionally change it's path, otherwise `yankring` will save it's history in a file in your `$HOME` directory
-- Optional, point `g:MarkdownPreviewUserStyles` to the directory where your user specific style sheets for the markdown previewer reside. If your an F/ peop, you can clone the repository for [F/ Markdown Themes][fmd-themes] and gain templates and style sheets to keep you out of MS Word.
-- Set the default browser by changing `g:RefreshRunningBrowserDefault`. Use "chrome", "safari", or "firefox"
-- Give yourself a signature with `g:snips_author` by including your name for various [snipmate][snipmate] snippets
-- Optionally uncomment one of the `colorschemes`, there are 4 included as described below, the default is `colorblind`
-
-## Updating
-
-Submodule plug-ins generate `doc/tag` files associated with help documents every time Vim is launched. This creates conflicts associated with pulling, updating or committing changes back to the main repository. It's necessary to clean these out before running any pulls or commits.
-
-There are two shell scripts included to help in this process [clean.sh][clean.sh] and [update.sh][update.sh].
-
-
-### Updating From The Repository
-
-To update from the latest changes in the repository run the following:
-
-1. Quit out of Vim
-- `bash clean.sh`
-- `git stash` or `git add` any updates from your environment spit out by the `clean.sh` call to `git status`
-- `git pull --rebase`
-
-Commit your changes back up to the repository.
-
-
-### Updating Submodules
-
-To pull upstream changes for all of the submodules run the following:
-
-1. Quit out of Vim
-- `bash update.sh`
-- `git stash` or `git add` any updates from your environment spit out by the `clean.sh` call to `git status`
-- `git pull --rebase`
-
-## Plug-Ins
-
-Plug-ins are managed using [pathogen][pathogen]. All submodule plug-ins are stored in the `bundle_storage` directory and are not available to Vim until they are symlinked to the `bundle` directory. The `bundle` directory is ignored by the repository allowing custom configurations on a per install basis. To activate a plug-in run:
-
-    bash add_bundle.sh <bundle-name>
-
-You'll need to restart Vim for the changes to take effect.
-
-
-### Adding New Plug-Ins As Submodules
-
-New plug-ins need to be added to the `bundle_storage` directory and should be treated as submodules. To add a new one run:
-
-    git submodule add <remote_repository> <home/.vim/bundle_storage/bundle-name>
-    git submodule init
-    git submodule update
-    bash add_bundle.sh <bundle-name>
-
-Test it out and if it's a keeper, add it to the repository, add it to the list below with a quick description and tell the world about it's greatness.
-
-[Vim Scripts][vim-scripts] has an enormous amount of repositories for all sorts of plug-ins. However, if the original author has their own github repository, try to clone from there instead.
-
-
-### Removing Submodules
-
-   1. Delete the relevant line from the `.gitmodules` file
-   - Delete the relevant section from `.git/config`
-   - Run `git rm --cached path_to_submodule` (**no trailing slash!!**)
-   - Remove the directory from `bundle_storage`
-   - Remove the symbolic link from `bundle`
-   - Remove any descriptions from the `README.md` file
+    ```
 
 
 ### Default Plug-Ins
@@ -101,7 +30,7 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 - [json.vim](https://github.com/vim-scripts/JSON.vim)
 - [markdown-preview.vim](https://github.com/mkitt/markdown-preview.vim/blob/master/doc/markdown-preview.txt)
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter/blob/master/doc/NERD_commenter.txt)
-- [nerdtree] (https://github.com/scrooloose/nerdtree)
+- [nerdtree](https://github.com/scrooloose/nerdtree)
 - [ctrlp](https://github.com/kien/ctrlp.vim)
 - [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [vim-vinegar](https://github.com/tpope/vim-vinegar)
@@ -126,96 +55,6 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 - [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt)
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt)
 - [yankring](https://github.com/vim-scripts/YankRing.vim/blob/master/doc/yankring.txt)
-
-
-**\*\* - TBD**
-
-- [html-autoclose.vim](https://github.com/vim-scripts/HTML-AutoCloseTag) - Automatically closes HTML tags, doesn't play well with the delimitMate plugin
-
-## Snippets
-
-By default all of the snippet files stored within `snippets_storage` are symlinked into the `snippets` directory. To see the available snippets for a given file type hit `<F5>`, a snippet is triggered using `<tab>`.
-
-Certain file types like JavaScript have hundreds of snippets based on the native language and various libraries. This can become unmanageable pretty quickly. The solution is to breakout specific libraries into their own files. For example `javascript-jasmine.snippets` where it needs to be named as `language-library.snippets`. Since snippets are saved in the `snippets_storage` directory, you can be selective about what gets a symbolic link within the `snippets` directory.
-
-If you are working in a project that includes jQuery, you would only have symbolic links created for `javascript.snippets`, `javascript-jasmine.snippets`, and `javascript-jquery.snippets`. Another project that uses [node.js][node], you could delete the symbolic link to `javascript-jquery.snippets` and add in `javascript-node.snippets` instead. This will give you a more manageable list of snippets to work with. By default, all snippets are included at installation, you'll want to tune these based on your needs.
-
-To learn more about [snipmate][snipmate] and creating snippets, type `:h snipmate`
-
-For a quick way to do this, you may want to [create a shell script](https://gist.github.com/781626) to help automate the process. You'll need to restart Vim for the snippets to take affect.
-
-
-## Syntax Checkers
-
-The configuration uses [syntastic][syntastic] quite heavily, most of it is out of the box. Buffers are checked after each save.
-
-The JavaScript syntax checker runs [JSHint][jshint] instead of jsl which is included with [syntastic][syntastic]. The executable to [JSHint][jshint] runs on [node.js][node] and needs to be installed via [npm][npm]. Also install the custom configuration JSON file into your `$HOME` directory. Instructions for doing this are located at the [jshint-config][jshint-config] repository. This installation will make it global to your machine. If you need a specific configuration on a per project basis, just drop a `.jshintrc` file in your project directory and tweak the settings.
-
-There is also an Objective C checker included. This uses the `gcc` and requires the `cwd` to have the `.xcodeproj` file in it.
-
-To learn more about [syntastic][syntastic] and syntax checkers, type `:h syntastic`
-
-
-## Editor Themes
-
-Themes included with this configuration:
-
-1. `colorblind`: Black background, super vibrant colors
-- `snowblind`: White background, vibrant colors
-- `cataracts`: Grey background with muted colors
-- `bloodshot`: Similar to colorblind but with muted colors
-
-In the `extras` directory are Terminal themes to match the Vim color themes.
-
-To use the Terminal themes, install [SIMBL 0.9.7](http://www.culater.net/software/SIMBL/SIMBL.php) and save the [64 Bit Terminal Colors](http://github.com/timmfin/terminalcolours) plug-in to:
-
-    ~/Library/Application Support/SIMBL/Plugins/
-
-
-The color themes have been designed with similarities in the syntax settings. Jumping between multiple languages should be easy on the mind and the eyes. Be adventurous and mix it up once in a while.
-
-**Most themes use the custom [MesloGM font](https://github.com/andreberg/Meslo-Font). Download, install and live the dream.**
-
-
-## Tips
-
-
-### FCheat
-
-Within Vim type `:h fcheat` to view key and leader bindings for the F/ configuration
-
-
-### Mouse Support For Terminal
-
-To get full mouse support (scrolling, clicking, etc...) within Terminal Vim, install the SIMBL [MouseTerm](http://bitheap.org/mouseterm/) plug-in. It brings the goodness.
-
-
-### Working With Your Own Submodules
-
-In order to keep your personal submodules available to forks but allow commits back to the upstream master repository from within the submodule:
-
-1. Create the repository for your bundle within git
--  Then from the `vimfiles` directory add the submodule as you would any other submodule
--  Within your newly created submodule, create a remote reference to the upstream master repository
--  Make changes to the submodule and push updates back to the remote upstream master
--  Then whenever you pull updates to all of your submodules, you as well as everyone else should get the changes
-
-Here is an example:
-
-    cd <path>/vimfiles/
-    git submodule add git://github.com/username/submodule-name.vim.git home/.vim/bundle_storage/submodule-name.vim
-    cd home/.vim/bundle_storage/submodule-name.vim/
-    git remote add push git@github.com:username/submodule-name.vim.git
-    git submodule init
-    git submodule update
-    bash add_bundle <bundle-name>
-
-Then whenever you make changes to the submodule:
-
-    cd <path>/vimfiles/
-    git push push master
-
-This allows you to make changes directly in your submodule, see the effects and push the changes back without maintaining multiple repositories and linking them back and forth. [Defunkt][defunkt] has a good article about [working with submodules][defunkt-subs].
 
 
 ## License and Contributions
