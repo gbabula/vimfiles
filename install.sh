@@ -5,6 +5,7 @@ default_bundles=(
   bufkill.vim
   delimitMate
   gist-vim
+  editorconfig-vim
   gundo
   indexed-search.vim
   jade.vim
