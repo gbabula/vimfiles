@@ -22,6 +22,7 @@ The [install script][install.sh] created initial symbolic links for the plug-ins
 - [browser-refresh.vim](https://github.com/mkitt/browser-refresh.vim/blob/master/doc/browser-refresh.txt)
 - [bufkill.vim](https://github.com/vim-scripts/bufkill.vim)
 - [gist-vim](https://github.com/mattn/gist-vim)
+- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 - [gundo](https://github.com/vim-scripts/Gundo/blob/master/doc/gundo.txt)
 - [indexed-search.vim](https://github.com/vim-scripts/IndexedSearch)
 - [jade.vim](https://github.com/vim-scripts/jade.vim)
