@@ -13,6 +13,9 @@
 [submodule "home/.vim/bundle_storage/gist-vim"]
 	path = home/.vim/bundle_storage/gist-vim
 	url = https://github.com/mattn/gist-vim.git
+[submodule "home/.vim/bundle_storage/editorconfig-vim"]
+	path = home/.vim/bundle_storage/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "home/.vim/bundle_storage/gundo"]
 	path = home/.vim/bundle_storage/gundo
 	url = https://github.com/vim-scripts/Gundo.git
